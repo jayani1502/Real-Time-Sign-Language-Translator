@@ -1,0 +1,56 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left,#1b1b2f,#000);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+h1 { margin-bottom: 10px; }
+
+button {
+  background: #00adb5;
+  border: none;
+  padding: 12px 24px;
+  margin: 6px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover:not(:disabled) {
+  background: #04c2d2;
+  transform: scale(1.05);
+}
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.video-container {
+  position: relative;
+  width: 340px;
+  height: 260px;
+  margin-top: 20px;
+}
+video, canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+#resultBox {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hidden { display: none; }
